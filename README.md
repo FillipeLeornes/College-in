@@ -1,57 +1,66 @@
-# 🚀 Getting started with Strapi
+# :checkered_flag: College-in
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
+Propõem uma forma mais eficiente para alunos de graduação buscarem projetos e membros para formação de equipes e equipes multiprofissionais, afim de agilizar a formação dos times e aumentar a qualidade dos projetos, além de ter um ambiente próprio para postarem seus trabalhos acadêmicos. Professores poderão procurar bolsistas para seus projetos com maior autonomia.
 
-### `develop`
+## :technologist: Membros da equipe
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-develop)
+- Fillipe Leornes - 539015 - Ciência da Computação.
+- Thiago Winvirg - 473160 -Ciência da Computação.
 
-```
-npm run develop
-# or
-yarn develop
-```
+## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-### `start`
+- Usuário registrado/Aluno.
+- Usuário não registrado.
+- Usuário registrado/Professor.
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-start)
 
-```
-npm run start
-# or
-yarn start
-```
+> Tenha em mente que obrigatoriamente a aplicação deve possuir funcionalidades acessíveis a todos os tipos de usuário e outra funcionalidades restritas a certos tipos de usuários.
 
-### `build`
+## :spiral_calendar: Entidades ou tabelas do sistema
 
-Build your admin panel. [Learn more](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html#strapi-build)
+- Usuário.
+- Projeto.
+- Universidade.
+- Categoria.
 
-```
-npm run build
-# or
-yarn build
-```
+## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
 
-## ⚙️ Deployment
+- Usuário não registrado: Pode ver propostas de projetos.
+- Usuário Registrado/Aluno: Pode buscar, criar, remover ou candidatar-se para projetos.
+- Usuário Registrado/Professor: Pode postar bolsas e contribuir com projetos de alunos.
 
-Strapi gives you many possible deployment options for your project. Find the one that suits you on the [deployment section of the documentation](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/deployment.html).
+----
 
-## 📚 Learn more
+:warning::warning::warning: As informações a seguir devem ser enviadas juntamente com a versão final do projeto. :warning::warning::warning:
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://docs.strapi.io) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+----
 
-## ✨ Community
+## :desktop_computer: Tecnologias e frameworks utilizados
 
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
+**Frontend:**
 
----
+Lista as tecnologias, frameworks e bibliotecas utilizados.
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+**Backend:**
+
+Lista as tecnologias, frameworks e bibliotecas utilizados.
+
+
+## :shipit: Operações implementadas para cada entidade da aplicação
+
+
+| Entidade| Criação | Leitura | Atualização | Remoção |
+| --- | --- | --- | --- | --- |
+| Entidade 1 | X |  X  |  | X |
+| Entidade 2 | X |    |  X | X |
+| Entidade 3 | X |    |  |  |
+
+> Lembre-se que é necessário implementar o CRUD de pelo menos duas entidades.
+
+## :neckbeard: Rotas da API REST utilizadas
+
+| Método HTTP | URL |
+| --- | --- |
+| GET | api/entidade1/|
+| POST | api/entidade2 |
