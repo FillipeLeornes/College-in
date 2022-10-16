@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "professors",
+  "info": {
+    "singularName": "professor",
+    "pluralName": "professors",
+    "displayName": "Professor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_default": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-default.user-default",
+      "inversedBy": "professor"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "professor"
+    },
+    "majors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::major.major"
+    },
+    "educational_institution": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::educational-institution.educational-institution",
+      "inversedBy": "professors"
+    },
+    "contact": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::contact.contact"
+    },
+    "academic_field": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::academic-field.academic-field",
+      "inversedBy": "professors"
+    }
+  }
+}

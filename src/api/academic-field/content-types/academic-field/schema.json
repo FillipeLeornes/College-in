@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "academic_fields",
+  "info": {
+    "singularName": "academic-field",
+    "pluralName": "academic-fields",
+    "displayName": "Academic Field",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "academic_field"
+    },
+    "majors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::major.major",
+      "mappedBy": "academic_field"
+    },
+    "professors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::professor.professor",
+      "mappedBy": "academic_field"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "professor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::professor.professor",
+      "inversedBy": "projects"
+    },
+    "educational_institution": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::educational-institution.educational-institution",
+      "inversedBy": "projects"
+    },
+    "academic_field": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::academic-field.academic-field",
+      "inversedBy": "projects"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::usuario.usuario",
+      "inversedBy": "projects"
+    }
+  }
+}

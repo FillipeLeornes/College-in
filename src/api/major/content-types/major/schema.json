@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "majors",
+  "info": {
+    "singularName": "major",
+    "pluralName": "majors",
+    "displayName": "Major",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::usuario.usuario",
+      "mappedBy": "major"
+    },
+    "educational_institution": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::educational-institution.educational-institution",
+      "inversedBy": "majors"
+    },
+    "academic_field": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::academic-field.academic-field",
+      "inversedBy": "majors"
+    }
+  }
+}

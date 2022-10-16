@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_defaults",
+  "info": {
+    "singularName": "user-default",
+    "pluralName": "user-defaults",
+    "displayName": "UserDefault",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "surname": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "password": {
+      "type": "password"
+    },
+    "professor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::professor.professor",
+      "mappedBy": "user_default"
+    },
+    "student": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::usuario.usuario",
+      "inversedBy": "user_default"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Student",
+        "Professor"
+      ]
+    },
+    "contact": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::contact.contact",
+      "inversedBy": "user_default"
+    }
+  }
+}

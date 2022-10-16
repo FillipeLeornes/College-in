@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "usuarios",
+  "info": {
+    "singularName": "usuario",
+    "pluralName": "usuarios",
+    "displayName": "Student",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "alias": {
+      "type": "string"
+    },
+    "major": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::major.major",
+      "inversedBy": "students"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "student"
+    },
+    "educational_institution": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::educational-institution.educational-institution",
+      "inversedBy": "students"
+    },
+    "user_default": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-default.user-default",
+      "mappedBy": "student"
+    },
+    "contact": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::contact.contact"
+    }
+  }
+}

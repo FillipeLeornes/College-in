@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "educational_institutions",
+  "info": {
+    "singularName": "educational-institution",
+    "pluralName": "educational-institutions",
+    "displayName": "Educational Institution",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "campus": {
+      "type": "string"
+    },
+    "majors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::major.major",
+      "mappedBy": "educational_institution"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project.project",
+      "mappedBy": "educational_institution"
+    },
+    "students": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::usuario.usuario",
+      "mappedBy": "educational_institution"
+    },
+    "professors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::professor.professor",
+      "mappedBy": "educational_institution"
+    }
+  }
+}
